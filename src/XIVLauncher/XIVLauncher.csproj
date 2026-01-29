@@ -3,7 +3,7 @@
     <Product>XIVLauncher</Product>
     <AssemblyTitle>XIVLauncher</AssemblyTitle>
     <Description>Custom launcher for the most critically acclaimed MMO.</Description>
-    <VersionPrefix>7.0.20</VersionPrefix>
+    <VersionPrefix>7.0.20-KR</VersionPrefix>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -33,6 +33,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Resources\recaptcha_page.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\aria2c-xl.exe">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -73,6 +76,7 @@
     <PackageReference Include="Extended.Wpf.Toolkit" />
     <PackageReference Include="MaterialDesignThemes" />
     <PackageReference Include="Microsoft.CSharp" />
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.3595.46" />
     <PackageReference Include="Serilog" />
     <PackageReference Include="Serilog.Sinks.Async" />
     <PackageReference Include="Serilog.Sinks.Debug" />
