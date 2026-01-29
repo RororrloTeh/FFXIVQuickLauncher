@@ -12,7 +12,7 @@
         FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
         AllowsTransparency="True"
         Background="Transparent"
-        WindowStyle="None" Height="196.088" Width="269.186">
+        WindowStyle="None" Height="200" Width="269.186">
     <Grid Margin="0,0,0,0">
         <materialDesign:Card Background="{DynamicResource MaterialDesignPaper}" Height="165" Margin="0,0,10,0">
             <StackPanel Margin="16,8,10,0">
