@@ -378,7 +378,7 @@ namespace XIVLauncher
             {
                 if (App.Settings.LauncherLanguage == null)
                 {
-                    var currentUiLang = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
+                    var currentUiLang = "ko"; //CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
                     App.Settings.LauncherLanguage = App.Settings.LauncherLanguage.GetLangFromTwoLetterIso(currentUiLang);
                 }
 
