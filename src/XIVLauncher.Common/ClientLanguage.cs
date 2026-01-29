@@ -8,8 +8,7 @@ namespace XIVLauncher.Common
         English,
         German,
         French,
-        Korean,
-        TraditionalChinese,
+        Korean
     }
 
     public static class ClientLanguageExtensions
