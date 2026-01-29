@@ -79,20 +79,19 @@ namespace XIVLauncher.Windows
                     }
                 }
             }
+        
+        SetupTabControl.SelectedIndex = 5;
 
-            if (SetupTabControl.SelectedIndex == 2)
-            {
                 App.Settings.GamePath = new DirectoryInfo(GamePathEntry.Text);
-                App.Settings.Language = (ClientLanguage) LanguageComboBox.SelectedIndex;
-                App.Settings.InGameAddonEnabled = HooksCheckBox.IsChecked == true;
+                App.Settings.Language = ClientLanguage.English;  // Set default language
+                App.Settings.InGameAddonEnabled = false; //HooksCheckBox.IsChecked == true;
 
                 App.Settings.AddonList = new List<AddonEntry>();
 
                 WasCompleted = true;
                 Close();
+                return;
             }
-
-            SetupTabControl.SelectedIndex++;
         }
     }
 }
