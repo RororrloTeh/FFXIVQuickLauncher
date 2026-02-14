@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace XIVLauncher.Common.Util;
 
-public class HttpClientDownloadWithProgress : IDisposable
+public class HttpClientDownloadWithProgress
 {
     private readonly string downloadUrl;
     private readonly string destinationFilePath;
@@ -68,7 +68,8 @@ public class HttpClientDownloadWithProgress : IDisposable
 
             if (readCount % 100 == 0)
                 this.TriggerProgressChanged(totalDownloadSize, totalBytesRead);
-        } while (isMoreToRead);
+        }
+        while (isMoreToRead);
     }
 
     private void TriggerProgressChanged(long? totalDownloadSize, long totalBytesRead)
@@ -81,10 +82,5 @@ public class HttpClientDownloadWithProgress : IDisposable
             progressPercentage = Math.Round((double)totalBytesRead / totalDownloadSize.Value * 100, 2);
 
         this.ProgressChanged(totalDownloadSize, totalBytesRead, progressPercentage);
-    }
-
-    public void Dispose()
-    {
-        this.httpClient?.Dispose();
     }
 }
