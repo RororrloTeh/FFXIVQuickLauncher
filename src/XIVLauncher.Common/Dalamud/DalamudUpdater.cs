@@ -551,7 +551,7 @@ namespace XIVLauncher.Common.Dalamud
 
         public async Task DownloadFile(string url, string path)
         {
-            using var downloader = new HttpClientDownloadWithProgress(this.client, url, path);
+            var downloader = new HttpClientDownloadWithProgress(this.client, url, path);
             downloader.ProgressChanged += this.ReportOverlayProgress;
 
             await downloader.Download().ConfigureAwait(false);
